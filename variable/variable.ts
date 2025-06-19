@@ -18,4 +18,15 @@ console.log(isLoggedIn);
 
 
 
+let hero: any;
+//Avoid using 'any' type in production code, it's used here for demonstration purposes.
+// Function that returns a string
+
+function getHero() {
+    return "False";
+}
+
+hero = getHero();
+
+console.log(hero);
 export { };
