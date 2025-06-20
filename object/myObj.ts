@@ -24,4 +24,23 @@ function getUser(): { name: string, email: string, age: number } {
 }
 
 
+
+
+
+type User = {
+    name: string;
+    email: string;
+    age: number;
+    isActive?: boolean;
+}
+
+function createUser2(user: User): User {
+    return user;
+}
+
+createUser2({ name: "", email: "", age: 0, isActive: true });
+
+
+
+
 export { };

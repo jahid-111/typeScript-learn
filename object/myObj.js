@@ -17,3 +17,7 @@ createUser({ name: "jahid", isPaid: true });
 function getUser() {
     return { name: "Jahid", email: "jahidjob4@gmail.com", age: 10 };
 }
+function createUser2(user) {
+    return user;
+}
+createUser2({ name: "", email: "", age: 0, isActive: true });
