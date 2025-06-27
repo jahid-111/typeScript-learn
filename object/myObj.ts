@@ -71,5 +71,17 @@ function createBook(book: Book): Book {
     return book;
 }
 
+type CardNumber = {
+    cardNumber: string;
+    cardHolder: string;
+}
 
+type CardDate = {
+    expiryDate: string;
+}
+
+// Combining types using intersection
+type CreditCard = CardNumber & CardDate & {
+    cvv: number;
+}
 export { };
