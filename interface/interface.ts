@@ -1,4 +1,7 @@
-
+// TypeScript Interface Example
+// An interface is a way to define the structure of an object.
+// It can be used to define the shape of an object, including its properties and methods.
+// Interfaces are used to define the structure of an object, including its properties and methods.
 
 
 
@@ -14,6 +17,11 @@ interface User {
     getCoupon(couponName: string): number;
 
 }
+
+// TypeScript Interface Example
+// An interface is a way to define the structure of an object.
+// It can be used to define the shape of an object, including its properties and methods.
+// Interfaces are used to define the structure of an object, including its properties and methods.
 
 
 
