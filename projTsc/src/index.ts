@@ -2,6 +2,9 @@
 console.log("Hello, TypeScript!");
 console.log("Hello, TypeScript  again!");
 
+//// TypeScript Classes and Access Modifiers
+// get and set Access Modifiers: public, private, protected
+
 
 class User {
     readonly email: string;
@@ -26,7 +29,7 @@ jahid.email
 class Developer {
 
     isSenior: boolean
-
+    private couseCount = 1
     constructor(
         public email: string,
         private pass: number,
@@ -36,7 +39,25 @@ class Developer {
         this.pass = pass;
         this.isSenior = isSenior;
     }
+
+    private deleteToken() {
+        console.log("Token deleted");
+    }
+
+    get courseCount(): number {
+        return this.courseCount;
+    }
+    // no return type is needed for setter
+    set courseCount(value) {
+        if (value <= 1) {
+            throw new Error("Course count should be more than 1");
+        }
+        this.courseCount = value;
+    }
 }
 
 
 const developerInfo = new Developer("jahidjob5@outlook.com", 123, true);
+developerInfo.courseCount = 2; // Setting course count
+// developerInfo.deleteToken() // Error: Property 'deleteToken' is private and only accessible within class 'Developer'.
+
