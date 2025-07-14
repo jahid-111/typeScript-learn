@@ -11,6 +11,7 @@ class User {
     name: string;
     pass: number;
     city: string = "";
+    protected salary = 9
     constructor(email: string, name: string, pass: number) {
         this.email = email;
         this.name = name;
@@ -54,6 +55,16 @@ class Developer {
         }
         this.courseCount = value;
     }
+}
+
+class SubUser extends User {
+
+    isFamily: boolean = false;
+    // Protected properties can be accessed in child classes instead of objects
+    changeCourseCount() {
+        this.salary = 5; // Accessing protected property from parent class
+    }
+
 }
 
 

@@ -6,6 +6,7 @@ console.log("Hello, TypeScript  again!");
 class User {
     constructor(email, name, pass) {
         this.city = "";
+        this.salary = 9;
         this.email = email;
         this.name = name;
         this.pass = pass;
@@ -35,6 +36,16 @@ class Developer {
             throw new Error("Course count should be more than 1");
         }
         this.courseCount = value;
+    }
+}
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = false;
+    }
+    // Protected properties can be accessed in child classes instead of objects
+    changeCourseCount() {
+        this.salary = 5; // Accessing protected property from parent class
     }
 }
 const developerInfo = new Developer("jahidjob5@outlook.com", 123, true);
